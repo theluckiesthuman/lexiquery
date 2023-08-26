@@ -39,11 +39,8 @@ func loadEnvFile() {
 	currentWorkDirectory, _ := os.Getwd()
 	rootPath := projectName.Find([]byte(currentWorkDirectory))
 
-	err := godotenv.Load(string(rootPath) + `/.env`)
+	_ = godotenv.Load(string(rootPath) + `/.env`)
 
-	if err != nil {
-		log.Printf("Could not load .env file")
-	}
 }
 
 func loadConfig() {

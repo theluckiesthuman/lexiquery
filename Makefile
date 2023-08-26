@@ -11,4 +11,7 @@ install:
 	make build
 	sudo cp lexiquery /usr/local/bin
 
+run:
+	go run cmd/main.go
+
 .PHONY: build test clean
